@@ -1,0 +1,131 @@
+html {
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  padding-top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-heading {
+  text-align: center;
+  color: $Dark-Blue;
+
+  span {
+    font-weight: 200;
+    color: $Grayish-Blue;
+  }
+}
+
+.main-text {
+  text-align: center;
+  color: $Grayish-Blue;
+  margin-bottom: 30px;
+  max-width: 520px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas:
+    '. . team-builder team-builder . .'
+    'supervisor supervisor team-builder team-builder calculator calculator'
+    'supervisor supervisor karma karma calculator calculator'
+    '. . karma karma . .';
+  grid-gap: 30px;
+  place-items: center;
+  padding: 30px;
+  margin-bottom: 2rem;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  border-radius: 7px;
+  padding: 30px;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+  }
+
+  &__header {
+    color: $Dark-Blue;
+  }
+
+  &__text {
+    color: $Grayish-Blue;
+    padding-bottom: 45px;
+  }
+
+  &__img {
+    width: 65px;
+    height: 65px;
+    align-self: flex-end;
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+.supervisor {
+  grid-area: supervisor;
+
+  &::before {
+    background-color: $Cyan;
+  }
+}
+
+.team-builder {
+  grid-area: team-builder;
+
+  &::before {
+    background-color: $Red;
+  }
+}
+
+.karma {
+  grid-area: karma;
+
+  &::before {
+    background-color: $Orange;
+  }
+}
+
+.calculator {
+  grid-area: calculator;
+
+  &::before {
+    background-color: $Blue;
+  }
+}
