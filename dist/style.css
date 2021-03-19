@@ -1,0 +1,210 @@
+/* COLORS */
+/* Primary */
+/* Neutral */
+/* Body Copy */
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Red: hsl(0, 78%, 62%)
+- Cyan: hsl(180, 62%, 55%)
+- Orange: hsl(34, 97%, 64%)
+- Blue: hsl(212, 86%, 64%)
+
+### Neutral
+
+- Very Dark Blue: hsl(234, 12%, 34%)
+- Grayish Blue: hsl(229, 6%, 66%)
+- Very Light Gray: hsl(0, 0%, 98%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 15px
+
+### Fonts
+
+- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
+- Weights: 200, 400, 600
+ */
+html {
+  font-size: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  padding-top: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container {
+  max-width: 1440px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-heading {
+  text-align: center;
+  color: #4c4e61;
+}
+
+.main-heading span {
+  font-weight: 200;
+  color: #a3a5ae;
+}
+
+.main-text {
+  text-align: center;
+  color: #a3a5ae;
+  margin-bottom: 30px;
+  max-width: 520px;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-areas: '. . team-builder team-builder . .' 'supervisor supervisor team-builder team-builder calculator calculator' 'supervisor supervisor karma karma calculator calculator' '. . karma karma . .';
+  grid-gap: 30px;
+  place-items: center;
+  padding: 30px;
+  margin-bottom: 2rem;
+}
+
+.card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100%;
+  border-radius: 7px;
+  padding: 30px;
+  -webkit-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+}
+
+.card__header {
+  color: #4c4e61;
+}
+
+.card__text {
+  color: #a3a5ae;
+  padding-bottom: 45px;
+}
+
+.card__img {
+  width: 65px;
+  height: 65px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.card__img img {
+  max-width: 100%;
+}
+
+.supervisor {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: supervisor;
+}
+
+.supervisor::before {
+  background-color: #45d3d3;
+}
+
+.team-builder {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: team-builder;
+}
+
+.team-builder::before {
+  background-color: #ea5353;
+}
+
+.karma {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: karma;
+}
+
+.karma::before {
+  background-color: #fcaf4a;
+}
+
+.calculator {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 2;
+  grid-area: calculator;
+}
+
+.calculator::before {
+  background-color: #549ef2;
+}
+/*# sourceMappingURL=style.css.map */
