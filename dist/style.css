@@ -2,43 +2,7 @@
 /* Primary */
 /* Neutral */
 /* Body Copy */
-/* # Front-end Style Guide
-
-## Layout
-
-The designs were created to the following widths:
-
-- Mobile: 375px
-- Desktop: 1440px
-
-## Colors
-
-### Primary
-
-- Red: hsl(0, 78%, 62%)
-- Cyan: hsl(180, 62%, 55%)
-- Orange: hsl(34, 97%, 64%)
-- Blue: hsl(212, 86%, 64%)
-
-### Neutral
-
-- Very Dark Blue: hsl(234, 12%, 34%)
-- Grayish Blue: hsl(229, 6%, 66%)
-- Very Light Gray: hsl(0, 0%, 98%)
-
-## Typography
-
-### Body Copy
-
-- Font size: 15px
-
-### Fonts
-
-- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
-- Weights: 200, 400, 600
- */
 html {
-  font-size: 15px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -54,8 +18,10 @@ html {
 
 body {
   font-family: 'Poppins', sans-serif;
+  font-size: 15px;
   min-height: 100vh;
-  padding-top: 5rem;
+  padding-top: 90px;
+  padding-bottom: 75px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -65,6 +31,12 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (max-width: 810px) {
+  body {
+    font-size: 12px;
+  }
 }
 
 .container {
@@ -79,6 +51,19 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0 30px;
+}
+
+@media screen and (max-width: 1440px) {
+  .container {
+    max-width: 810px;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .container {
+    max-width: 420px;
+  }
 }
 
 .main-heading {
@@ -91,11 +76,19 @@ body {
   color: #a3a5ae;
 }
 
+@media screen and (max-width: 810px) {
+  .main-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+}
+
 .main-text {
   text-align: center;
   color: #a3a5ae;
   margin-bottom: 30px;
   max-width: 520px;
+  margin-bottom: 80px;
 }
 
 .grid {
@@ -106,8 +99,24 @@ body {
       grid-template-areas: '. . team-builder team-builder . .' 'supervisor supervisor team-builder team-builder calculator calculator' 'supervisor supervisor karma karma calculator calculator' '. . karma karma . .';
   grid-gap: 30px;
   place-items: center;
-  padding: 30px;
   margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 1440px) {
+  .grid {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 'supervisor supervisor team-builder team-builder' 'supervisor supervisor team-builder team-builder' 'karma karma calculator calculator' 'karma karma calculator calculator';
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: 'supervisor' 'team-builder' 'karma' 'calculator';
+    grid-gap: 24px;
+  }
 }
 
 .card {
@@ -126,9 +135,13 @@ body {
   height: 100%;
   border-radius: 7px;
   padding: 30px;
+  background-color: #fff;
   -webkit-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  max-width: 360px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
 }
 
 .card::before {
@@ -142,11 +155,15 @@ body {
 
 .card__header {
   color: #4c4e61;
+  -webkit-transform: translateZ(20px);
+          transform: translateZ(20px);
 }
 
 .card__text {
   color: #a3a5ae;
   padding-bottom: 45px;
+  -webkit-transform: translateZ(20px);
+          transform: translateZ(20px);
 }
 
 .card__img {
@@ -154,6 +171,8 @@ body {
   height: 65px;
   -ms-flex-item-align: end;
       align-self: flex-end;
+  -webkit-transform: translateZ(20px);
+          transform: translateZ(20px);
 }
 
 .card__img img {

@@ -1,5 +1,4 @@
 html {
-  font-size: 15px;
   box-sizing: border-box;
 }
 
@@ -13,8 +12,10 @@ html {
 
 body {
   font-family: 'Poppins', sans-serif;
+  font-size: 15px;
   min-height: 100vh;
-  padding-top: 5rem;
+  padding-top: 90px;
+  padding-bottom: 75px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,7 +26,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 30px;
 }
+
 .main-heading {
   text-align: center;
   color: $Dark-Blue;
@@ -41,6 +44,7 @@ body {
   color: $Grayish-Blue;
   margin-bottom: 30px;
   max-width: 520px;
+  margin-bottom: 80px;
 }
 
 .grid {
@@ -53,7 +57,6 @@ body {
     '. . karma karma . .';
   grid-gap: 30px;
   place-items: center;
-  padding: 30px;
   margin-bottom: 2rem;
 }
 
@@ -66,8 +69,10 @@ body {
   height: 100%;
   border-radius: 7px;
   padding: 30px;
+  background-color: $White;
   box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  max-width: 360px;
 
   &::before {
     content: '';
