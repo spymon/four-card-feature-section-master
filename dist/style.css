@@ -186,7 +186,7 @@ body {
   background-color: #549ef2;
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1400px) {
   .container {
     max-width: 810px;
   }
